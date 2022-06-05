@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "use-Makinas";
+  src: url("./Makinas-4-Flat.otf") format("opentype");
+}
+
+header,
+footer {
+  width: 100%;
+  background-color: #249193;
+  padding: 1em;
+  box-sizing: border-box;
+}
+header {
+  color: #f5dd83;
+  font-size: 1.5em;
+  font-family: "use-Makinas";
+}
+footer {
+  color: #fff;
+  text-align: center;
+}
+body {
+  min-width: 280px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.inner {
+  display: flex;
+}
+.img_container {
+  height: calc(100vh - 7.5em);
+}
+.illustration {
+  background: url(../img/illustration.jpg);
+  width: 15%;
+  background-size: cover;
+  background-position: center;
+}
+.photo {
+  background: url(../img/208080050_1599771750221919_1549770289920588832_n.jpg);
+  flex-grow: 1;
+  background-size: cover;
+  background-position: center;
+}
+.iframe_container {
+  width: calc((100vh - 7.5em) * 0.9);
+  height: calc(100vh - 7.5em);
+}
+
+@media (max-width: 900px) {
+  .inner {
+    flex-wrap: wrap;
+  }
+  .img_container,
+  .iframe_container {
+    height: calc(80vw / 0.9);
+  }
+  .illustration {
+    width: 20%;
+  }
+  .iframe_container {
+    width: 80%;
+  }
+  .photo {
+    width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .img_container,
+  .iframe_container {
+    height: calc(100vw / 0.9);
+    min-height: calc(280px / 0.9);
+  }
+  .iframe_container {
+    width: 100%;
+  }
+  .illustration {
+    display: none;
+  }
+}
